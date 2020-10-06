@@ -4,8 +4,7 @@
 }
 
 body{
-     font-family: 'DM Sans', sans-serif;
-    /*font-family: 'Noto Sans KR', serif; */
+    font-family: 'IBMPlexSansKR-Light';
 }
 
 /* Reset CSS */
@@ -21,9 +20,11 @@ a{
 }
 
 button{
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Noto Sans KR', serif;
-    /* font-size: 16px; */
+    font-family: 'IBMPlexSansKR-Light',sans-serif;
+    border:0 none;
+    background-color:transparent;
+    cursor:pointer;    
+    font-size: 16px;
 }
 
 button:focus,
