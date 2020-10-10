@@ -1,6 +1,11 @@
+body{
+    font-family: 'IBMPlexSansKR-Light';
+    background-color: rgb(83, 76, 90);
+}
+
 #main_bg{
     height: 100vh;
-    background: url(../assets/main.jpg) no-repeat right 85.5% scroll;
+    background: url('./assets/main.jpg') no-repeat right 85.5% scroll;
     background-size: cover;
 }
 #main_dark{
@@ -12,6 +17,7 @@ header,section{
     color : white;
 }
 nav>ul>li>button{
+    all : unset;
     color : #fff;
 }
 nav>ul {
@@ -22,6 +28,19 @@ nav>ul {
 }
 nav>ul>li{
     text-align: center;
+}
+
+section{
+    height: 100vh;
+    padding : 50vh 0 0 20vw;
+}
+section>h1{
+    font-size: 40px;
+    margin-bottom: 25vh;
+}
+section>h1>span{
+    font-size: 20px;
+    display: block;
 }
 section{
     padding : 50vh 0 0 20vw;
@@ -43,6 +62,10 @@ section>a{
     text-decoration: underline;
     text-underline-position: under;    
 }
+
+aside{
+    display: none;
+}
 aside{
    position: relative;
 }
@@ -54,6 +77,38 @@ aside>div{
     background-color: #495d63;
     color: #d3d3d3;
     padding: 13vh 0 0 12vw
+}
+aside>h2{
+    font-size: 16px;
+    margin-bottom: 3vh;
+}
+aside>p{
+    font-size: 14px;
+    margin-bottom: 10vh;
+}
+aside>ol{
+    margin-bottom: 10vh;
+}
+aside>ol>li{
+    font-size: 14px;
+}
+aside>h3{
+    font-size: 14px;
+    margin-bottom: 3vh;
+}
+aside>dl{
+    display: inline-block;
+    width: 34%;
+}
+aside>dl.dl-margin{
+    margin-bottom: 3vh;
+
+}
+aside>dl>dt{
+    font-size: 18px;
+}
+aside>dl>dd{
+    font-size: 15.5px;
 }
 aside>div>h2{
     font-size: 16px;
