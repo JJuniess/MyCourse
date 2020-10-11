@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import jQuery from "jquery";
-window.$ = window.jQuery=jQuery;
+window.jQuery= window.$ = jQuery;
 
 function App() {
   return (
@@ -58,38 +58,31 @@ function App() {
         <dl>
             <dt>김어진</dt>
             <dd>Front-end Developer</dd>
-        </dl>
-            
-            
-            
+        </dl>  
     </aside>
-    
-    {/* <script>
-      $(document).ready(function(){
-          $("#about").on('click',function(e){
-              $("aside>div").animate( {
-              left: '0'
-            });
-            $("#close_about").animate( {
-              left: '97vw'
-            });
-          });
-          $("#close_about").on('click',function(e){
-              $("aside>div").animate( {
-              left: '-100vw'
-            });
-            $(this).animate( {
-              left: '-97vw'
-            });
-          });
-      });
-    </script> */}
-
     </div>
-
-
-
   )
 }
+
+
+// $(document).ready(function(){
+//   $("#about").on('click',function(e){
+//       $("aside>div").animate( {
+//       left: '0'
+//     });
+//     $("#close_about").animate( {
+//       left: '97vw'
+//     });
+//   });
+
+//   $("#close_about").on('click',function(e){
+//       $("aside>div").animate( {
+//       left: '-100vw'
+//     });
+//     $(this).animate( {
+//       left: '-97vw'
+//     });
+//   });
+// });
 
 export default App;
