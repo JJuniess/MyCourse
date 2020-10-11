@@ -4,19 +4,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyTC</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../common.css">
     <!-- <link rel="stylesheet" href="./css/map.css"> -->
 </head>
 
 <style>
     /* 이곳에 스타일 적용하기 */
+    .hideClass{width:0; height:0; font-size:0; line-height:0;
+    position:absolute; visibility:hidden;}
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
 
     /* 도현 작업 */
-    #left_tab{}
+    main{
+        /* display: flex;
+        justify-content: space-between; */
+        position: relative;
+    }
+    #left_tab{
+        background-color: bisque;
+        z-index: 9999;
+        position: absolute;
+        width: 33.3333%;
+        top: 0;
+
+    }
 
     /* 어진 작업 */
-    #rightt_tab{}
+    #right_tab{
+        background-color: bisque;
+        z-index: 9999;
+        position: absolute;
+        width: 33.3333%;
+        top: 0; right: 0;
+    }
+    #right_tab>h2{
+        text-align : center;
+    }
+    #right_tab>button{
+        all : unset;
+    
+    }
+    #right_tab>ol{
+        
+    }
+    #right_tab>ol>li{
+        
+    }
+    #right_tab>ol>li>h3>button>img{
+        background: rgb(0, 0, 0, 0);
+
+    }
+
+
 
 </style>
 
@@ -55,10 +99,20 @@
             </fieldset>
         </form>
         <button type="button">
-            <img src="./assets/user.png" alt="user">
+            <img src="../assets/user.png" alt="user">
         </button>
+        <div class="hideClass">
+            <strong id="user_name">임지호</strong>
+            <button type="button">Log out</button>
+        </div>
+
     </header>
     <main>
+        <!-- 지도 section -->
+        <section>
+            <div id="map" style="width:100%;height:350px;"></div>
+        </section>
+
         <!-- 왼쪽 탭 section -->
         <section id="left_tab">
             <h2><span>제주특별자치도 /</span><span>서귀포시</span>검색결과</h2>
@@ -76,44 +130,98 @@
             </ol>
         </section>
 
-        <!-- 지도 section -->
-        <section>
-            <div id="map" style="width:100%;height:350px;"></div>
-        </section>
+        
 
         <!-- 오른쪽 탭 section -->
         <section id="right_tab">
             <h2>My Course</h2>
             <button type="button">…</button>
             <div>
-                <button type="button">편집</button>
-                <button type="button">이름수정</button>
+                <button type="button" id="edit" class="hideClass">편집</button>
+                <button type="button" id="edit_name" class="hideClass">이름수정</button>
+                <button type="button" id="store" class="hideClass">저장</button>
             </div>
             <ol>
                 <li>
-                    <h3>힐링</h3>
+                    <h3>
+                        <button type="button">
+                            <img src="../assets/delete.png" id="course_delete" alt="delete course">
+                        </button>
+                        힐링
+                        <button type="button">
+                            <img src="../assets/hamburder.png" id="course_order" alt="change course order">
+                        </button>
+                    </h3>
                     <ol>
                         <li></li>
                     </ol>
                 </li>
                 <li>
-                    <h3>먹부림</h3>
+                    <h3>
+                        <button type="button">
+                            <img src="../assets/delete.png" id="course_delete" alt="delete course">
+                        </button>
+                        먹부림
+                        <button type="button">
+                            <img src="../assets/hamburder.png" id="course_order" alt="change course order">
+                        </button>
+                    </h3>
                     <ol>
                         <li></li>
                     </ol>
                 </li>
                 <li>
-                    <h3>물놀이</h3>
+                    <h3>
+                        <button type="button">
+                            <img src="../assets/delete.png" id="course_delete" alt="delete course">
+                        </button>
+                        물놀이
+                        <button type="button">
+                            <img src="../assets/hamburder.png" id="course_order" alt="change course order">
+                        </button>
+                    </h3>
                     <ol>
                         <li></li>
                     </ol>
                 </li>
                 <li>
-                    <h3>새코스1</h3>
+                    <h3>
+                        <button type="button">
+                            <img src="../assets/delete.png" id="course_delete" alt="delete course">
+                        </button>
+                        새코스1
+                        <button type="button">
+                            <img src="../assets/hamburder.png" id="course_order" alt="change course order">
+                        </button>
+                    </h3>
                     <ol>
-                        <li>쇠소깍</li>
-                        <li>섭지코지</li>
-                        <li>카멜리아힐</li>
+                        <li>
+                            <button type="button">
+                                <img src="../assets/delete.png" id="list_delete" alt="delete course list">
+                            </button>
+                            쇠소깍
+                            <button type="button">
+                                <img src="../assets/hamburder.png" id="list_order" alt="change list order">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img src="../assets/delete.png" id="list_delete" alt="delete course list">
+                            </button>
+                            섭지코지
+                            <button type="button">
+                                <img src="../assets/hamburder.png" id="list_order" alt="change list order">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img src="../assets/delete.png" id="list_delete" alt="delete course list">
+                            </button>
+                            카멜리아힐
+                            <button type="button">
+                                <img src="../assets/hamburder.png" id="list_order" alt="change list order">
+                            </button>
+                        </li>
                     </ol>
                 </li>
             </ol>
