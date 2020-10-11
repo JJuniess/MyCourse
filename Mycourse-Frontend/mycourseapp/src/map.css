@@ -1,3 +1,78 @@
-body{
-    /* background-color: blue; */
-}
+    /* 이곳에 스타일 적용하기 */
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 이곳에 스타일 적용하기 */
+    .hideClass{width:0; height:0; font-size:0; line-height:0;
+    position:absolute; visibility:hidden;}
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        height: 10vh;
+    }
+
+    /* 도현 작업 */
+    main{
+        /* display: flex;
+        justify-content: space-between; */
+        position: relative;
+    }
+    #left_tab{
+        padding-top: 40px;
+        padding-left: 40px;
+        background-color: #f0f0f0;
+        z-index: 9999;
+        position: absolute;
+        width: 33.3333%;
+        top: 0;
+    }
+    #left_tab>h2{
+        font-size: 13px;
+        color: #495d63;
+        margin-bottom: 40px;
+    }
+
+    #left_tab>h2>span{
+        color: #77aaad;
+    }
+    #left_tab>h3{
+        font-size: 20px;
+        color: #495d63;
+    }
+    #left_tab>ol>li{
+        height: 70px;
+        line-height: 70px;
+        font-size: 14px;
+        color: #495d63;
+
+    }
+
+    /* 어진 작업 */
+    #right_tab{
+        background-color: bisque;
+        z-index: 9999;
+        position: absolute;
+        width: 33.3333%;
+        top: 0; right: 0;
+    }
+    #right_tab>h2{
+        text-align : center;
+    }
+    #right_tab>button{
+        all : unset;
+    
+    }
+    #right_tab>ol{
+        
+    }
+    #right_tab>ol>li{
+        
+    }
+    #right_tab>ol>li>h3>button>img{
+        background: rgb(0, 0, 0, 0);
+
+    }
